@@ -35,19 +35,19 @@ class AddViewController: UIViewController {
 
             guard let self = self else { return }
 
-            let dataController = DataController.shared
+            let dataManager = DataManager.shared
             if self.todo != nil {
 
                 self.todo?.title = self.titleTextField.text
                 self.todo?.content = self.contentTextView.text
             } else {
 
-                let todo: Todo = dataController.create()
+                let todo: Todo = dataManager.create()
                 todo.title = self.titleTextField.text
                 todo.content = self.contentTextView.text
                 todo.date = Date()
             }
-            dataController.saveContext()
+            dataManager.saveContext()
             self.navigationController?.popViewController(animated: true)
         }))
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))

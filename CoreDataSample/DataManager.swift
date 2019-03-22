@@ -9,16 +9,16 @@
 import UIKit
 import CoreData
 
-class DataController {
+class DataManager {
 
-    static let shared: DataController = DataController()
+    static let shared: DataManager = DataManager()
 
-    private var persistentController: NSPersistentContainer!
+    private var persistentContainer: NSPersistentContainer!
 
     init() {
 
-        persistentController = NSPersistentContainer(name: "CoreDataSample")
-        persistentController.loadPersistentStores { (description, error) in
+        persistentContainer = NSPersistentContainer(name: "CoreDataSample")
+        persistentContainer.loadPersistentStores { (description, error) in
 
             if let error = error {
                 fatalError("Failed to load Core Data stack: \(error)")
@@ -30,14 +30,14 @@ class DataController {
 
     func create<T: NSManagedObject>() -> T {
 
-        let context = persistentController.viewContext
+        let context = persistentContainer.viewContext
         let object = NSEntityDescription.insertNewObject(forEntityName: String(describing: T.self), into: context) as! T
         return object
     }
 
     func saveContext() {
 
-        let context = persistentController.viewContext
+        let context = persistentContainer.viewContext
 
         do {
 
@@ -50,7 +50,7 @@ class DataController {
 
     func getFetchedResultController<T: NSManagedObject>(with descriptor: [String] = []) -> NSFetchedResultsController<T> {
 
-        let context = persistentController.viewContext
+        let context = persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<T>(entityName: String(describing: T.self))
         fetchRequest.sortDescriptors = descriptor.map { NSSortDescriptor(key: $0, ascending: true) }
         return NSFetchedResultsController<T>(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)

@@ -13,7 +13,7 @@
 		46B1AA6A2244D6D7006A686B /* CoreDataSample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46B1AA682244D6D7006A686B /* CoreDataSample.xcdatamodeld */; };
 		46B1AA6C2244D6D8006A686B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B1AA6B2244D6D8006A686B /* Assets.xcassets */; };
 		46B1AA6F2244D6D8006A686B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46B1AA6D2244D6D8006A686B /* LaunchScreen.storyboard */; };
-		46B1AA772244D774006A686B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B1AA762244D774006A686B /* DataController.swift */; };
+		46B1AA772244D774006A686B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B1AA762244D774006A686B /* DataManager.swift */; };
 		46B1AA7A2245236C006A686B /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B1AA782245236C006A686B /* TodoTableViewCell.swift */; };
 		46B1AA7B2245236C006A686B /* TodoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46B1AA792245236C006A686B /* TodoTableViewCell.xib */; };
 		46B1AA7D224527B1006A686B /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B1AA7C224527B1006A686B /* AddViewController.swift */; };
@@ -28,7 +28,7 @@
 		46B1AA6B2244D6D8006A686B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46B1AA6E2244D6D8006A686B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46B1AA702244D6D8006A686B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		46B1AA762244D774006A686B /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		46B1AA762244D774006A686B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		46B1AA782245236C006A686B /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		46B1AA792245236C006A686B /* TodoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodoTableViewCell.xib; sourceTree = "<group>"; };
 		46B1AA7C224527B1006A686B /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 				46B1AA6D2244D6D8006A686B /* LaunchScreen.storyboard */,
 				46B1AA702244D6D8006A686B /* Info.plist */,
 				46B1AA682244D6D7006A686B /* CoreDataSample.xcdatamodeld */,
-				46B1AA762244D774006A686B /* DataController.swift */,
+				46B1AA762244D774006A686B /* DataManager.swift */,
 				46B1AA782245236C006A686B /* TodoTableViewCell.swift */,
 				46B1AA792245236C006A686B /* TodoTableViewCell.xib */,
 			);
@@ -152,7 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46B1AA642244D6D7006A686B /* ViewController.swift in Sources */,
-				46B1AA772244D774006A686B /* DataController.swift in Sources */,
+				46B1AA772244D774006A686B /* DataManager.swift in Sources */,
 				46B1AA7D224527B1006A686B /* AddViewController.swift in Sources */,
 				46B1AA6A2244D6D7006A686B /* CoreDataSample.xcdatamodeld in Sources */,
 				46B1AA7A2245236C006A686B /* TodoTableViewCell.swift in Sources */,

@@ -22,12 +22,12 @@ class ViewController: UIViewController {
 
     lazy var fetchedResultsController: NSFetchedResultsController<Todo> = {
 
-        let _controller: NSFetchedResultsController<Todo> = dataController.getFetchedResultController(with: ["date"])
+        let _controller: NSFetchedResultsController<Todo> = dataManager.getFetchedResultController(with: ["date"])
         _controller.delegate = self
         return _controller
     }()
 
-    let dataController = DataController.shared
+    let dataManager = DataManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
